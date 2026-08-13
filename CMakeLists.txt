@@ -9,6 +9,8 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 add_executable(${PROJECT_NAME}
     src/main.cpp
+    src/sockcppwrap/sockcppwrap.cpp
+    src/sockcppwrap/sockcppwrap.h
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE
