@@ -8,7 +8,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 add_executable(${PROJECT_NAME}
-    src/main.cpp
+    src/blocking_server/main.cpp
     src/sockcppwrap/sockcppwrap.cpp
     src/sockcppwrap/sockcppwrap.h
 )

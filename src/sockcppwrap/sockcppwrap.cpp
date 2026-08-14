@@ -7,13 +7,15 @@ namespace Simple
 namespace Network
 {
 
-void SockCppWrap::check_error(int result, const std::string& operation) const {
+void SockCppWrap::check_error(int result, const std::string& operation) const
+{
     if (result == -1) {
         throw NetworkException(operation, errno);
     }
 }
 
-void SockCppWrap::validate_socket_state() const {
+void SockCppWrap::validate_socket_state() const
+{
     if (m_socket_fd == -1) {
         throw NetworkException("Invalid socket descriptor");
     }
@@ -76,7 +78,8 @@ void SockCppWrap::close()
     }
 }
 
-void SockCppWrap::bind(const std::string& address, int port) {
+void SockCppWrap::bind(const std::string& address, int port)
+{
     validate_socket_state();
     
     if (m_is_connected || m_is_listening) {
