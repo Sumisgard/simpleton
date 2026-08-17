@@ -4,8 +4,6 @@
 
 namespace Simple
 {
-namespace Network
-{
 
 void SockCppWrap::check_error(int result, const std::string& operation) const
 {
@@ -484,5 +482,4 @@ bool SockCppWrap::is_valid_ipv6(const std::string& address)
     return inet_pton(AF_INET6, address.c_str(), &addr6) == 1;
 }
 
-} // namespace Network
 } // namespace Simple

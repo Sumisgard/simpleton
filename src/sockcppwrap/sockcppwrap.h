@@ -15,8 +15,6 @@
 
 namespace Simple
 {
-namespace Network
-{
 
 class NetworkException : public std::runtime_error
 {
@@ -127,5 +125,4 @@ public:
     void release() { m_socket = nullptr; }
 };
 
-} // namespace Network
 } // namespace Simple
