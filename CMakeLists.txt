@@ -7,13 +7,19 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
-add_executable(${PROJECT_NAME}
+add_executable(blocking_server
     src/blocking_server/main.cpp
     src/sockcppwrap/sockcppwrap.cpp
     src/sockcppwrap/sockcppwrap.h
 )
 
-target_include_directories(${PROJECT_NAME} PRIVATE
+add_executable(non_blocking_server
+    src/non_blocking_server/main.cpp
+    src/sockcppwrap/sockcppwrap.cpp
+    src/sockcppwrap/sockcppwrap.h  
+)
+
+target_include_directories(blocking_server PRIVATE
     src
 )
 
