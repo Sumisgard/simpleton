@@ -11,15 +11,22 @@ add_executable(blocking_server
     src/blocking_server/main.cpp
     src/sockcppwrap/sockcppwrap.cpp
     src/sockcppwrap/sockcppwrap.h
+    src/non_blocking_server/epoll_echo_server.cpp
 )
 
 add_executable(non_blocking_server
     src/non_blocking_server/main.cpp
     src/sockcppwrap/sockcppwrap.cpp
-    src/sockcppwrap/sockcppwrap.h  
+    src/sockcppwrap/sockcppwrap.h
+    src/non_blocking_server/epoll_echo_server.h
+    src/non_blocking_server/epoll_echo_server.cpp 
 )
 
 target_include_directories(blocking_server PRIVATE
+    src
+)
+
+target_include_directories(non_blocking_server PRIVATE
     src
 )
 
